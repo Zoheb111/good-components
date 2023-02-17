@@ -1,0 +1,10 @@
+<label>
+    Enter
+</label>
+<input 
+    type="text" 
+    [formControl]="control" 
+    (blur)="this.onTouch($event)" 
+    (change)="this.onChange(control.value)"
+    (input)="this.onChange(control.value)"
+    (paste)="!disablePaste ? this.onChange(control.value) : null">
